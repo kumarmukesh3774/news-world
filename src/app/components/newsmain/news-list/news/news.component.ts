@@ -6,7 +6,7 @@ import { NewsService } from '../../../../services/news.service'
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-	@Input() movie: any;
+	@Input() news: any;
 
   constructor(private newsService: NewsService) { }
 

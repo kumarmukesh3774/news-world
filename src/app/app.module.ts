@@ -17,7 +17,12 @@ import { NewsComponent } from './components/newsmain/news-list/news/news.compone
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { RouterModule, Routes } from '@angular/router';
+const routes :Routes = [
+  {path: '', redirectTo:'/newsmain',pathMatch:'full'},
+  {path: 'newsmain', component:NewsmainComponent},
+  {path: 'favourite', component:FavouritesComponent },
+];
 
 @NgModule({
   declarations: [

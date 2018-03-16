@@ -14,12 +14,11 @@
         <app-favourites></app-favourites>
         <app-about-us></app-about-us>
       </ul>
-      <app-search (success)="ABC($event)" ></app-search>
+      <app-newsmain></app-newsmain>
 
     </div>
   </div>
 </nav>
+<app-news-list [news]="news"></app-news-list>
 
-
-<app-news-list></app-news-list>
 <app-news></app-news>
