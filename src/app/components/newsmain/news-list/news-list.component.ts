@@ -7,10 +7,11 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class NewsListComponent implements OnInit {
   
-	@Input() news: Array<JSON>= [];
+  @Input() newsDisplay = [];
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { 
   }
-
+ 
 }

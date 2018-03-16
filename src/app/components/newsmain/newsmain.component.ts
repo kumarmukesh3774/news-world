@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./newsmain.component.css']
 })
 export class NewsmainComponent implements OnInit {
-  public news =[];
+  public newsList =[];
   constructor() { }
 
   ngOnInit() {
@@ -14,7 +14,8 @@ export class NewsmainComponent implements OnInit {
 
     // Update news list based on search input
     setNewsList(event) {
-      this.news = event.newsList;
+      this.newsList = event.newsList;
+     // alert(this.newsList);
     }
 
 }

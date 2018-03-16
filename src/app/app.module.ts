@@ -10,7 +10,7 @@ import { BusinessComponent } from './components/newsmain/business/business.compo
 import { SearchComponent } from './components/newsmain/search/search.component';
 import { TechComponent } from './components/newsmain/tech/tech.component';
 import { FavouritesComponent } from './components/newsmain/favourites/favourites.component';
-import { AboutUsComponent } from './components/about-us/about-us.component';
+import { AboutUsComponent } from './components/newsmain/about-us/about-us.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NewsListComponent } from './components/newsmain/news-list/news-list.component';
 import { NewsComponent } from './components/newsmain/news-list/news/news.component';
@@ -18,10 +18,17 @@ import { NewsComponent } from './components/newsmain/news-list/news/news.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
 const routes :Routes = [
   {path: '', redirectTo:'/newsmain',pathMatch:'full'},
   {path: 'newsmain', component:NewsmainComponent},
   {path: 'favourite', component:FavouritesComponent },
+  {path: 'tech', component:TechComponent },
+  {path: 'sports', component:SportsComponent },
+  {path: 'business', component:BusinessComponent },
+  {path: 'home', component:HomeComponent },
+  {path: 'about', component:AboutUsComponent },
+  {path: 'search', component:SearchComponent }
 ];
 
 @NgModule({
@@ -37,13 +44,16 @@ const routes :Routes = [
     AboutUsComponent,
     FooterComponent,
     NewsListComponent,
-    NewsComponent
+    NewsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(routes)
+ 
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

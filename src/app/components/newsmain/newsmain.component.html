@@ -1,1 +1,2 @@
-<app-search (success)="setNewsList($event)"></app-search>
+<app-search (successEmitter)="setNewsList($event)"></app-search>
+<app-news-list [newsDisplay]="newsList"></app-news-list>

@@ -1,6 +1,17 @@
-<h1> Search results</h1>
+<!-- <h1> Search results</h1>
 
-<div *ngFor="let news of news">
+<div *ngFor="let singleNews of newsDisplay"></div>
 	
-<app-news [news]="news"></app-news>
-</div>
+<app-news [singleNews]="singleNews"></app-news> -->
+
+<div class="container">
+    <div class="row">
+       <div class="col-md-4"  *ngFor="let singleNews of newsDisplay">
+           <div class="card-group" >
+               <div class="card">
+                 <app-news [singleNews]="singleNews"></app-news>
+               </div>      
+            </div>
+       </div>
+   </div>  
+ </div>

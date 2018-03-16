@@ -14,7 +14,7 @@ export class NewsService {
   searchHandler(searchInput){
 
 
-      return this.http.get("https://api.themoviedb.org/3/search/movie?api_key=d3f52c1a9668c85909b9f50188e541b7&language=en-US&include_adult=false&query=batman")
+      return this.http.get("https://api.themoviedb.org/3/search/movie?api_key=d3f52c1a9668c85909b9f50188e541b7&language=en-US&include_adult=false&query="+searchInput)
        .map(data => data.json(),
      (error: any)=>this.handleError(error));
      }
