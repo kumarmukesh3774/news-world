@@ -8,19 +8,24 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class NewsService {
-
+  public newsList:any=[];
   constructor(private http : Http) { }
 
-  searchHandler(searchInput){
+  searchHandler(apiUrl){
 
 
-      return this.http.get("https://api.themoviedb.org/3/search/movie?api_key=d3f52c1a9668c85909b9f50188e541b7&language=en-US&include_adult=false&query="+searchInput)
+      this.newsList= this.http.get(apiUrl)
        .map(data => data.json(),
      (error: any)=>this.handleError(error));
+     return this.newsList;
      }
      private handleError(error: Response){
        return Observable.throw(error.statusText);
     
+  }
+  getNewsList(){
+      return this.newsList;
+
   }
 
 
