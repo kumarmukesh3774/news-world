@@ -14,11 +14,14 @@ export class NewsComponent implements OnInit {
   }
 
   // Add favourite movie to database
-  addMovie(movie) {
-/*   	this.newsService.addNews(movie).subscribe((res) =>{
-  		
+  addToFav(singleNews) {
+   
+ 	this.newsService.addToFav(singleNews).subscribe((res) =>{
+  		console.log("Added to Favourites");
+      
   	}, (error) =>{
-
-  	}) */
+        console.log("Error in  Adding Favourites");
+        
+  	}) 
   }
 }
