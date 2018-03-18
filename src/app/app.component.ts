@@ -9,9 +9,9 @@ export class AppComponent {
   title = 'app';
   ngOnInit() {
   }
-  public movieList=[];
+/*   public movieList=[];
   ABC(event){
     this.movieList=event;
-  }
+  } */
 
 }

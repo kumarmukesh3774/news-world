@@ -1,3 +1,30 @@
 {
-  "newsList": ["fgghvj","vghbvhj"]
+  "articles": [
+    {
+      "source": {
+        "id": "business-insider",
+        "name": "Business Insider"
+      },
+      "author": "Alex Lockie",
+      "title": "If Kim Jong Un gets rid of his nukes, he's basically signing his own death warrant",
+      "description": "North Korean leader Kim Jong Un has unilaterally decided to discuss denuclearization with the US, but seriously pursuing that line could end in his ouster and death. Dictators like Kim run the risk of violent upheavals, as the North Korean people do not have …",
+      "url": "http://www.businessinsider.com/kim-jong-un-north-korea-denuclearizes-violent-overthrow-2018-3",
+      "urlToImage": "https://amp.businessinsider.com/images/5928726f79474c1c008b4aa3-750-375.jpg",
+      "publishedAt": "2018-03-18T16:17:42Z",
+      "id": 11
+    },
+    {
+      "source": {
+        "id": "business-insider",
+        "name": "Business Insider"
+      },
+      "author": "Michelle Mark and Reuters",
+      "title": "A Cirque du Soleil performer plunged to his death during a Florida show — hours after he wrote 'it's time to go for it' on Instagram about the new act",
+      "description": "Cirque du Soleil performer Yann Arnaud died after falling during a show in Florida on Saturday. Arnaud was an experienced performer and had been with Cirque for 15 years. He posted on Instagram about the new aerial straps routine before the show, saying \"it's…",
+      "url": "http://www.businessinsider.com/cirque-du-soleil-performer-dies-after-florida-show-aerial-straps-act-2018-3",
+      "urlToImage": "https://amp.businessinsider.com/images/5aaed31c873dc626008b494d-750-375.jpg",
+      "publishedAt": "2018-03-18T21:18:14Z",
+      "id": 14
+    }
+  ]
 }

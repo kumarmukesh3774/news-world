@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {CommonService}  from './services/common.service';
 import {NewsService}  from './services/news.service';
 import { AppComponent } from './app.component';
 import { NewsmainComponent } from './components/newsmain/newsmain.component';
@@ -34,7 +35,7 @@ const routes :Routes = [
     RouterModule.forRoot(routes)
  
   ],
-  providers: [NewsService],
+  providers: [NewsService,CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

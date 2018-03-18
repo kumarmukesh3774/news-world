@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsmainComponent implements OnInit {
   public newsList =[];
+  public normalFlag:boolean;
   constructor() { }
 
   ngOnInit() {
@@ -15,6 +16,7 @@ export class NewsmainComponent implements OnInit {
     // Update news list based on search input
     setNewsList(event) {
       this.newsList = event.newsList;
+      this.normalFlag=event.normalFlag;
      // alert(this.newsList);
     }
 

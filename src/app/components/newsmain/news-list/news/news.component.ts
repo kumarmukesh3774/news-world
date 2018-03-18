@@ -1,27 +1,50 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { NewsService } from '../../../../services/news.service'
+import { NewsService } from '../../../../services/news.service';
+import {HeaderComponent} from '../../../header/header.component';
+import { NgIf } from '@angular/common';
+import {CommonService} from '../../../../services/common.service';
+
+
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-  styleUrls: ['./news.component.css']
+  styleUrls: ['./news.component.css'],
+  providers: [CommonService]
 })
 export class NewsComponent implements OnInit {
-	@Input() singleNews: any;
+  @Input() singleNews: any;
+  @Input() normalFlag:boolean;
 
-  constructor(private newsService: NewsService) { }
+  
+  public headerComponent:HeaderComponent;
+
+
+
+  constructor(private newsService: NewsService,private commonService: CommonService) {
+    //calling header Component from news Component
+   // this.commonService.callFavourites(); 
+   }
 
   ngOnInit() {
   }
 
-  // Add favourite movie to database
+  // Add favourite news
   addToFav(singleNews) {
    
  	this.newsService.addToFav(singleNews).subscribe((res) =>{
-  		console.log("Added to Favourites");
+    alert("Added to Favourites");
       
   	}, (error) =>{
-        console.log("Error in  Adding Favourites");
+      alert("Error in  Adding Favourites");
         
   	}) 
   }
+  deleteFavNews(singleNews){
+    this.newsService.deleteFavNews(singleNews).subscribe((res) =>{
+      alert("Removed from Favourites");  
+     
+  	}, (error) =>{
+      alert("Error in  Removing Favourites");
+        
+  	}) } 
 }

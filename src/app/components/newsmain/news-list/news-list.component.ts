@@ -9,15 +9,13 @@ import {NewsService}         from '../../../services/news.service';
 })
 export class NewsListComponent implements OnInit {
   
-  @Input() newsDisplay = [];
- //newsDisplay = [];
- 
-
+  @Input() newsDisplay = []; 
+  @Input() normalFlag:boolean;
+  
   constructor(private newsService:NewsService) {
-    this.newsDisplay=this.newsService.getNewsList();
-   
+    //this.newsDisplay=this.newsService.getNewsList();
+    
    }
-
   ngOnInit() { 
   }
  
